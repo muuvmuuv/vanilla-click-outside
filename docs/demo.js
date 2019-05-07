@@ -10,6 +10,7 @@ console.heading = str => {
 
 var options = {
   removeListener: false,
+  verbose: true,
 }
 
 window.onload = () => {
@@ -149,20 +150,10 @@ function contextLog(name, value, str) {
 }
 
 function handleCallback(name, t) {
-  switch (t) {
-    case 1:
-      contextLog(name, false, 'HTMLCollection | NodeList')
-      break
-    case 2:
-      contextLog(name, false, 'HTMLElement')
-      break
-    case 3:
-      contextLog(name, false, 'Undefined')
-      break
-    case 0:
-    default:
-      contextLog(name, true, t)
-      break
+  if (isHTMLElement(t)) {
+    contextLog(name, true, t)
+  } else {
+    contextLog(name, false, t)
   }
 }
 

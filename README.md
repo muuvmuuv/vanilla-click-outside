@@ -1,6 +1,6 @@
 # VanillaClickOutside 🌫
 
-A simple, small (535B) and easy to use function to detect clicks outside an element.
+A simple, small (579B) and easy to use function to detect clicks outside an element.
 See the [Demo](https://muuvmuuv.github.io/vanilla-click-outside/) or a live example
 on [www.additive-net.de](https://www.additive.lcl/de/messtechnik-sensorik) or
 [www.m8finder.net](https://www.m8finder.net/).

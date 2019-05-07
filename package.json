@@ -1,6 +1,6 @@
 {
   "name": "vanilla-click-outside",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A simple easy to script to determine whenever the user clicks outside a selected element.",
   "keywords": ["click", "click-outside", "vanilla"],
   "homepage": "https://github.com/muuvmuuv/vanilla-click-outside",
@@ -19,6 +19,7 @@
     "pretty": "pretty-quick",
     "open": "open ./docs/index.html",
     "build": "rollup -cm",
+    "prepublishOnly": "npm run build",
     "start": "rollup -cmw"
   },
   "husky": {
