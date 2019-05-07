@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "A simple easy to script to determine whenever the user clicks outside a selected element.",
   "keywords": ["click", "click-outside", "vanilla"],
-  "homepage": "https://marvin.digital/",
+  "homepage": "https://github.com/muuvmuuv/on-click-outside",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/muuvmuuv/on-click-outside.git"
+  },
   "license": "MIT",
   "author": {
     "name": "Marvin Heilemann",

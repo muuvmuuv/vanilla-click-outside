@@ -1,4 +1,4 @@
-# OnClickOutside 🎠
+# OnClickOutside 🌫
 
 A simple, small (535B) and easy to use function to detect clicks outside an element.
 See the [Demo](https://muuvmuuv.github.io/on-click-outside/) or a live example on
