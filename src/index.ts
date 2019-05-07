@@ -16,7 +16,7 @@ const defaultOptions: OCOOptions = {
  * @param {OCOSelector} selector Element to exclude
  * @param {OCOCallback} callback Do something on click outside
  */
-export default function OnClickOutside(
+export default function VanillaClickOutside(
   selector: OCOSelector,
   options: OCOOptions,
   callback: OCOCallback

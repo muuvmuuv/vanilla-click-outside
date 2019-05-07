@@ -47,7 +47,7 @@ module.exports = {
       output: {
         comments: (_, { type, value }) => {
           if (type == 'comment2') {
-            return new RegExp('OnClickOutside').test(value)
+            return new RegExp('VanillaClickOutside').test(value)
           }
         },
       },

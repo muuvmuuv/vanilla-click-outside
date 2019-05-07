@@ -1,8 +1,8 @@
-# OnClickOutside 🌫
+# VanillaClickOutside 🌫
 
 A simple, small (535B) and easy to use function to detect clicks outside an element.
-See the [Demo](https://muuvmuuv.github.io/on-click-outside/) or a live example on
-[www.additive-net.de](https://www.additive.lcl/de/messtechnik-sensorik) or
+See the [Demo](https://muuvmuuv.github.io/vanilla-click-outside/) or a live example
+on [www.additive-net.de](https://www.additive.lcl/de/messtechnik-sensorik) or
 [www.m8finder.net](https://www.m8finder.net/).
 
 ## How to use
@@ -14,20 +14,21 @@ Have a look at our [documentation](./docs) files, e.g. [demo.js](./docs/demo.js)
 include the one you need (all minified and compressed):
 
 - CommonJS:
-  [`on-click-outside/dist/on-click-outside.common.js`](./dist/on-click-outside.common.js)
+  [`vanilla-click-outside/dist/vanilla-click-outside.common.js`](./dist/vanilla-click-outside.common.js)
 - ESM:
-  [`on-click-outside/dist/on-click-outside.esm.js`](./dist/on-click-outside.esm.js)
-- ES6: [`on-click-outside/dist/on-click-outside.js`](./dist/on-click-outside.js)
+  [`vanilla-click-outside/dist/vanilla-click-outside.esm.js`](./dist/vanilla-click-outside.esm.js)
+- ES6:
+  [`vanilla-click-outside/dist/vanilla-click-outside.js`](./dist/vanilla-click-outside.js)
 
 ```js
-import OnClickOutside from 'on-click-outside'
+import VanillaClickOutside from 'vanilla-click-outside'
 
 const options = {
   removeListener: false,
 }
 
 const ele = document.getElementById('root')
-OnClickOutside(ele, options, type => console.log(type))
+VanillaClickOutside(ele, options, type => console.log(type))
 ```
 
 ### HTML

@@ -25,7 +25,7 @@ window.onload = () => {
   console.log('isNodeList', isNodeList(rootGetElementById))
   console.log('isHTMLCollection', isHTMLCollection(rootGetElementById))
   console.log('isHTMLElement', isHTMLElement(rootGetElementById))
-  OnClickOutside(rootGetElementById, options, t =>
+  VanillaClickOutside(rootGetElementById, options, t =>
     handleCallback('rootGetElementById', t)
   )
 
@@ -36,7 +36,7 @@ window.onload = () => {
   console.log('isNodeList', isNodeList(innerGetElementById))
   console.log('isHTMLCollection', isHTMLCollection(innerGetElementById))
   console.log('isHTMLElement', isHTMLElement(innerGetElementById))
-  OnClickOutside(innerGetElementById, options, t =>
+  VanillaClickOutside(innerGetElementById, options, t =>
     handleCallback('innerGetElementById', t)
   )
 
@@ -55,7 +55,7 @@ window.onload = () => {
   console.log('isNodeList', isNodeList(rootGetElementsByClassName))
   console.log('isHTMLCollection', isHTMLCollection(rootGetElementsByClassName))
   console.log('isHTMLElement', isHTMLElement(rootGetElementsByClassName))
-  OnClickOutside(rootGetElementsByClassName, options, t =>
+  VanillaClickOutside(rootGetElementsByClassName, options, t =>
     handleCallback('rootGetElementsByClassName', t)
   )
 
@@ -66,7 +66,7 @@ window.onload = () => {
   console.log('isNodeList', isNodeList(innerGetElementsByClassName))
   console.log('isHTMLCollection', isHTMLCollection(innerGetElementsByClassName))
   console.log('isHTMLElement', isHTMLElement(innerGetElementsByClassName))
-  OnClickOutside(innerGetElementsByClassName, options, t =>
+  VanillaClickOutside(innerGetElementsByClassName, options, t =>
     handleCallback('innerGetElementsByClassName', t)
   )
 
@@ -85,7 +85,7 @@ window.onload = () => {
   console.log('isNodeList', isNodeList(rootQuerySelector))
   console.log('isHTMLCollection', isHTMLCollection(rootQuerySelector))
   console.log('isHTMLElement', isHTMLElement(rootQuerySelector))
-  OnClickOutside(rootQuerySelector, options, t =>
+  VanillaClickOutside(rootQuerySelector, options, t =>
     handleCallback('rootQuerySelector', t)
   )
 
@@ -96,7 +96,7 @@ window.onload = () => {
   console.log('isNodeList', isNodeList(innerQuerySelector))
   console.log('isHTMLCollection', isHTMLCollection(innerQuerySelector))
   console.log('isHTMLElement', isHTMLElement(innerQuerySelector))
-  OnClickOutside(innerQuerySelector, options, t =>
+  VanillaClickOutside(innerQuerySelector, options, t =>
     handleCallback('innerQuerySelector', t)
   )
 
@@ -115,7 +115,7 @@ window.onload = () => {
   console.log('isNodeList', isNodeList(rootQuerySelectorAll))
   console.log('isHTMLCollection', isHTMLCollection(rootQuerySelectorAll))
   console.log('isHTMLElement', isHTMLElement(rootQuerySelectorAll))
-  OnClickOutside(rootQuerySelectorAll, options, t =>
+  VanillaClickOutside(rootQuerySelectorAll, options, t =>
     handleCallback('rootQuerySelectorAll', t)
   )
 
@@ -126,7 +126,7 @@ window.onload = () => {
   console.log('isNodeList', isNodeList(innerQuerySelectorAll))
   console.log('isHTMLCollection', isHTMLCollection(innerQuerySelectorAll))
   console.log('isHTMLElement', isHTMLElement(innerQuerySelectorAll))
-  OnClickOutside(innerQuerySelectorAll, options, t =>
+  VanillaClickOutside(innerQuerySelectorAll, options, t =>
     handleCallback('innerQuerySelectorAll', t)
   )
 

@@ -1,12 +1,12 @@
 {
-  "name": "on-click-outside",
+  "name": "vanilla-click-outside",
   "version": "1.0.0",
   "description": "A simple easy to script to determine whenever the user clicks outside a selected element.",
   "keywords": ["click", "click-outside", "vanilla"],
-  "homepage": "https://github.com/muuvmuuv/on-click-outside",
+  "homepage": "https://github.com/muuvmuuv/vanilla-click-outside",
   "repository": {
     "type": "git",
-    "url": "https://github.com/muuvmuuv/on-click-outside.git"
+    "url": "https://github.com/muuvmuuv/vanilla-click-outside.git"
   },
   "license": "MIT",
   "author": {
@@ -14,7 +14,7 @@
     "email": "marvin.heilemann+github@googlemail.com",
     "url": "https://marvin.digital/"
   },
-  "main": "./dist/on-click-outside",
+  "main": "./dist/vanilla-click-outside",
   "scripts": {
     "pretty": "pretty-quick",
     "open": "open ./docs/index.html",
