@@ -1,0 +1,7 @@
+.babelrc
+.prettierrc
+.prettierignore
+rollup.config.js
+tsconfig.json
+tslint.json
+docs/

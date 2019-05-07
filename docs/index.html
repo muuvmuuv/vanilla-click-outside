@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>OnClickOutside</title>
+
+    <!-- meta -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover" />
+    <meta name="description" content="A simple easy to script to determine whenever the user clicks outside a selected element." />
+    <meta name="generator" content="Parcel" />
+    <meta name="language" content="en" />
+
+    <!-- external -->
+    <link href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+    <!-- main -->
+    <link rel="stylesheet" href="./demo.css" />
+    <script async src="./on-click-outside.js"></script>
+    <script async src="./demo.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>OnClickOutside</h1>
+      <p>Click anywhere in the viewport to see the magic. More verbose information in the console.</p>
+
+      <!-- <div class="badges d-flex w-100 justify-content-center">
+        <a href="https://github.com/muuvmuuv/vanilla-carousel/issues" rel="nofollow" target="_blank">
+          <img alt="GitHub issues" src="https://img.shields.io/github/issues/muuvmuuv/vanilla-carousel.svg?style=flat-square" />
+        </a>
+        <a href="https://github.com/muuvmuuv/vanilla-carousel/releases" rel="nofollow" target="_blank">
+          <img alt="GitHub All Releases" src="https://img.shields.io/github/downloads/muuvmuuv/vanilla-carousel/total.svg?style=flat-square" />
+        </a>
+        <a href="https://github.com/muuvmuuv/vanilla-carousel/releases" rel="nofollow" target="_blank">
+          <img alt="GitHub package.json version" src="https://img.shields.io/github/package-json/v/muuvmuuv/vanilla-carousel.svg?style=flat-square" />
+        </a>
+        <a href="https://github.com/muuvmuuv/vanilla-carousel" rel="nofollow" target="_blank">
+          <img alt="GitHub stars" src="https://img.shields.io/github/stars/muuvmuuv/vanilla-carousel.svg?style=flat-square" />
+        </a>
+      </div> -->
+    </header>
+    <main>
+      <section name="demo">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="root" id="root" data-title="root">
+                <div class="inner" id="inner" data-title="inner"></div>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-5">
+            <div class="col-12">
+              <table class="log table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Selector</th>
+                    <th>Outside</th>
+                    <th>Descriptor</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

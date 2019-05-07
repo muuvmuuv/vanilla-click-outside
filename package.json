@@ -1,0 +1,44 @@
+{
+  "name": "on-click-outside",
+  "version": "1.0.0",
+  "description": "A simple easy to script to determine whenever the user clicks outside a selected element.",
+  "keywords": ["click", "click-outside", "vanilla"],
+  "homepage": "https://marvin.digital/",
+  "license": "MIT",
+  "author": {
+    "name": "Marvin Heilemann",
+    "email": "marvin.heilemann+github@googlemail.com",
+    "url": "https://marvin.digital/"
+  },
+  "main": "./dist/on-click-outside",
+  "scripts": {
+    "pretty": "pretty-quick",
+    "open": "open ./docs/index.html",
+    "build": "rollup -cm",
+    "start": "rollup -cmw"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@types/node": "^11.13.8",
+    "change-case": "^3.1.0",
+    "create-banner": "^1.0.0",
+    "husky": "^2.1.0",
+    "prettier": "^1.17.0",
+    "pretty-quick": "^1.10.0",
+    "rimraf": "^2.6.3",
+    "rollup": "^1.11.3",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-scss": "^1.0.1",
+    "rollup-plugin-terser": "^4.0.4",
+    "rollup-plugin-typescript": "^1.0.1",
+    "rollup-watch": "^4.3.1",
+    "tslib": "^1.9.3",
+    "typescript": "^3.4.5"
+  }
+}
