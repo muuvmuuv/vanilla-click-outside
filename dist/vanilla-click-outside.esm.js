@@ -1,5 +1,5 @@
 /*!
- * VanillaClickOutside v1.2.0
+ * VanillaClickOutside v1.3.0
  * https://github.com/muuvmuuv/vanilla-click-outside
  *
  * Copyright 2019 Marvin Heilemann
