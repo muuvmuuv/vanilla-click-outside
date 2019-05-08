@@ -1,18 +1,20 @@
-const babel = require('rollup-plugin-babel')
-const typescript = require('rollup-plugin-typescript')
-const { terser } = require('rollup-plugin-terser')
-const changeCase = require('change-case')
-const createBanner = require('create-banner')
-const pkg = require('./package.json')
+import babel from 'rollup-plugin-babel'
+import typescript from 'rollup-plugin-typescript'
+import { terser } from 'rollup-plugin-terser'
+import changeCase from 'change-case'
+import createBanner from 'create-banner'
+import moment from 'moment'
+import pkg from './package.json'
 
 const name = changeCase.pascalCase(pkg.name)
 const banner = createBanner({
   data: {
     name: name,
+    date: moment().format('DD.MM.YYYY'),
   },
 })
 
-module.exports = {
+export default {
   input: 'src/index.ts',
   output: [
     {

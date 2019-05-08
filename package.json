@@ -39,6 +39,7 @@
     "change-case": "^3.1.0",
     "create-banner": "^1.0.0",
     "husky": "^2.1.0",
+    "moment": "^2.24.0",
     "prettier": "^1.17.0",
     "pretty-quick": "^1.10.0",
     "rimraf": "^2.6.3",
