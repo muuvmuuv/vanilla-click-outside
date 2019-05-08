@@ -1,8 +1,12 @@
 {
   "name": "vanilla-click-outside",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "A simple easy to script to determine whenever the user clicks outside a selected element.",
-  "keywords": ["click", "click-outside", "vanilla"],
+  "keywords": [
+    "click",
+    "click-outside",
+    "vanilla"
+  ],
   "homepage": "https://github.com/muuvmuuv/vanilla-click-outside",
   "repository": {
     "type": "git",
@@ -14,12 +18,13 @@
     "email": "marvin.heilemann+github@googlemail.com",
     "url": "https://marvin.digital/"
   },
-  "main": "./dist/vanilla-click-outside",
+  "main": "dist/vanilla-click-outside.common.js",
+  "module": "dist/vanilla-click-outside.esm.js",
   "scripts": {
-    "pretty": "pretty-quick",
-    "open": "open ./docs/index.html",
     "build": "rollup -cm",
+    "open": "open docs/index.html",
     "prepublishOnly": "npm run build",
+    "pretty": "pretty-quick",
     "start": "rollup -cmw"
   },
   "husky": {
