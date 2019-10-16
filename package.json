@@ -1,7 +1,7 @@
 {
   "name": "vanilla-click-outside",
   "version": "2.0.0",
-  "description": "A simple easy to script to determine whenever the user clicks outside a selected element.",
+  "description": "A simple easy to use script to determine whenever the user clicks outside a selected element.",
   "keywords": [
     "click",
     "click-outside",
