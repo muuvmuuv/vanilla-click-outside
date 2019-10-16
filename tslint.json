@@ -6,7 +6,10 @@
     "no-duplicate-variable": true,
     "curly": true,
     "class-name": true,
-    "semicolon": [true, "never"],
+    "semicolon": [
+      true,
+      "never"
+    ],
     "triple-equals": true
   }
 }

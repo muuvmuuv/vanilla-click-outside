@@ -1,11 +1,15 @@
-export function isNodeList(s: any): boolean {
-  return NodeList.prototype.isPrototypeOf(s)
+export function isNodeList(target: any): boolean {
+  return NodeList.prototype.isPrototypeOf(target)
 }
 
-export function isHTMLCollection(s: any): boolean {
-  return HTMLCollection.prototype.isPrototypeOf(s)
+export function isHTMLCollection(target: any): boolean {
+  return HTMLCollection.prototype.isPrototypeOf(target)
 }
 
-export function isHTMLElement(s: any): boolean {
-  return HTMLElement.prototype.isPrototypeOf(s)
+export function isHTMLElement(target: any): boolean {
+  return HTMLElement.prototype.isPrototypeOf(target)
+}
+
+export function isElement(target: any): boolean {
+  return Element.prototype.isPrototypeOf(target)
 }

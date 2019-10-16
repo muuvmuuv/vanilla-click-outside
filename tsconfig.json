@@ -1,14 +1,12 @@
 {
   "compilerOptions": {
-    "outDir": "./dist/",
-    "sourceMap": true,
     "strict": true,
     "noImplicitReturns": true,
     "noImplicitAny": true,
-    "module": "commonjs",
+    "module": "esnext",
     "moduleResolution": "node",
-    "strictPropertyInitialization": false,
-    "target": "es6"
   },
-  "include": ["./src/**/*"]
+  "include": [
+    "./src/**/*.ts"
+  ]
 }

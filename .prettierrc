@@ -1,12 +1,9 @@
 {
-  "printWidth": 85,
-  "tabWidth": 2,
-  "useTabs": false,
+  "trailingComma": "es5",
   "semi": false,
   "singleQuote": true,
-  "trailingComma": "es5",
-  "bracketSpacing": true,
-  "proseWrap": "always",
+  "endOfLine": "lf",
+  "arrowParens": "always",
   "overrides": [
     {
       "files": "*.html",

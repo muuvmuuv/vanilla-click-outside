@@ -1,6 +1,6 @@
 {
   "name": "vanilla-click-outside",
-  "version": "1.3.0",
+  "version": "2.0.0",
   "description": "A simple easy to script to determine whenever the user clicks outside a selected element.",
   "keywords": [
     "click",
@@ -18,38 +18,21 @@
     "email": "marvin.heilemann+github@googlemail.com",
     "url": "https://marvin.digital/"
   },
-  "main": "dist/vanilla-click-outside.common.js",
-  "module": "dist/vanilla-click-outside.esm.js",
+  "source": "src/index.ts",
+  "main": "dist/vanilla-click-outside.js",
+  "unpkg": "dist/vanilla-click-outside.umd.js",
+  "module": "dist/vanilla-click-outside.mjs",
+  "types": "dist/vanilla-click-outside.d.ts",
   "scripts": {
-    "build": "rollup -cm",
-    "open": "open docs/index.html",
-    "prepublishOnly": "npm run build",
-    "pretty": "pretty-quick",
-    "start": "rollup -cmw"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
+    "start": "npm run dev",
+    "dev": "microbundle watch",
+    "build": "microbundle build && npm run docs-build",
+    "docs-build": "microbundle build -o docs -f umd",
+    "docs-watch": "microbundle watch -o docs -f umd",
+    "docs-serve": "http-server docs -c-1 -o"
   },
   "devDependencies": {
-    "@babel/core": "^7.4.4",
-    "@babel/preset-env": "^7.4.4",
-    "@types/node": "^11.13.8",
-    "change-case": "^3.1.0",
-    "create-banner": "^1.0.0",
-    "husky": "^2.1.0",
-    "moment": "^2.24.0",
-    "prettier": "^1.17.0",
-    "pretty-quick": "^1.10.0",
-    "rimraf": "^2.6.3",
-    "rollup": "^1.11.3",
-    "rollup-plugin-babel": "^4.3.2",
-    "rollup-plugin-scss": "^1.0.1",
-    "rollup-plugin-terser": "^4.0.4",
-    "rollup-plugin-typescript": "^1.0.1",
-    "rollup-watch": "^4.3.1",
-    "tslib": "^1.9.3",
-    "typescript": "^3.4.5"
+    "http-server": "^0.11.1",
+    "microbundle": "^0.11.0"
   }
 }

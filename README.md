@@ -1,34 +1,31 @@
 # VanillaClickOutside 🌫
 
-A simple, small (580B) and easy to use function to detect clicks outside an element.
-See the [Demo](https://muuvmuuv.github.io/vanilla-click-outside/) or a live example
-on [www.additive-net.de](https://www.additive.lcl/de/messtechnik-sensorik) or
-[www.m8finder.net](https://www.m8finder.net/).
+A simple, small (578B) and easy to use function to detect clicks outside an element. Here is a [demo](https://muuvmuuv.github.io/vanilla-click-outside/).
 
 ## How to use
 
-Have a look at our [documentation](./docs) files, e.g. [demo.js](./docs/demo.js).
+Have a look at the [documentation](./docs) files; [demo.js](./docs/demo.js).
 
 ### JavaScript
 
-include the one you need (all minified and compressed):
+Include the one you need (all minified and compressed):
 
-- CommonJS:
-  [`vanilla-click-outside/dist/vanilla-click-outside.common.js`](./dist/vanilla-click-outside.common.js)
-- ESM:
-  [`vanilla-click-outside/dist/vanilla-click-outside.esm.js`](./dist/vanilla-click-outside.esm.js)
-- ES6:
-  [`vanilla-click-outside/dist/vanilla-click-outside.js`](./dist/vanilla-click-outside.js)
+- MJS:
+  [vanilla-click-outside/dist/vanilla-click-outside.common.js](./dist/vanilla-click-outside.mjs.js)
+- UMD:
+  [vanilla-click-outside/dist/vanilla-click-outside.esm.js](./dist/vanilla-click-outside.umd.js)
+- ESNext:
+  [vanilla-click-outside/dist/vanilla-click-outside.js](./dist/vanilla-click-outside.js)
+- CDN (via [UNPKG](https://unpkg.com/)):
+  [https://unpkg.com/vanilla-click-outside](https://unpkg.com/vanilla-click-outside)
 
 ```js
-import VanillaClickOutside from 'vanilla-click-outside'
-
-const options = {
-  removeListener: false,
-}
+import vanillaClickOutside from 'vanilla-click-outside'
 
 const ele = document.getElementById('root')
-VanillaClickOutside(ele, options, type => console.log(type))
+vanillaClickOutside(ele, (type) => {
+  console.log(type)
+})
 ```
 
 ### HTML

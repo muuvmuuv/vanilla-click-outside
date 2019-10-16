@@ -1,170 +1,116 @@
-console.heading = str => {
-  const style = `
-    color: #FFFFFF;
-    background-color: #036ff6;
-    font-size: 12px;
-    padding: 2px 20px;
-  `
-  console.log(`%c${str}`, style)
+const options = {
+  removeListener: false,
 }
 
-var options = {
-  removeListener: false,
-  verbose: true,
+function handleCallback(name, value) {
+  const tableRow = document.getElementsByClassName(name)[0]
+  tableRow.innerHTML = `<tr>
+      <td>${name}</td>
+      <td class="${value}">${value}</td>
+    </tr>`
 }
 
 window.onload = () => {
-  // ------------------------------------------------------------------------
+  // -----------------------------------------
+  // HTMLCollectionOf<Element>
 
-  var rootGetElementById = document.getElementById('root')
-  var innerGetElementById = document.getElementById('inner')
+  const rootGetElementsByClassName = document.getElementsByClassName('root')
+  const innerGetElementsByClassName = document.getElementsByClassName('inner')
 
-  console.log('\n')
-  console.heading('rootGetElementById')
-  console.log(rootGetElementById)
-  console.log('contructor', rootGetElementById.constructor.name)
-  console.log('isNodeList', isNodeList(rootGetElementById))
-  console.log('isHTMLCollection', isHTMLCollection(rootGetElementById))
-  console.log('isHTMLElement', isHTMLElement(rootGetElementById))
-  VanillaClickOutside(rootGetElementById, options, t =>
-    handleCallback('rootGetElementById', t)
-  )
-
-  console.log('\n')
-  console.heading('innerGetElementById')
-  console.log(innerGetElementById)
-  console.log('contructor', innerGetElementById.constructor.name)
-  console.log('isNodeList', isNodeList(innerGetElementById))
-  console.log('isHTMLCollection', isHTMLCollection(innerGetElementById))
-  console.log('isHTMLElement', isHTMLElement(innerGetElementById))
-  VanillaClickOutside(innerGetElementById, options, t =>
-    handleCallback('innerGetElementById', t)
-  )
-
-  console.log('\n')
-  console.log('-'.repeat(60))
-
-  // ------------------------------------------------------------------------
-
-  var rootGetElementsByClassName = document.getElementsByClassName('root')
-  var innerGetElementsByClassName = document.getElementsByClassName('inner')
-
-  console.log('\n')
-  console.heading('rootGetElementsByClassName')
+  console.log('>>> rootGetElementsByClassName')
   console.log(rootGetElementsByClassName)
-  console.log('contructor', rootGetElementsByClassName.constructor.name)
-  console.log('isNodeList', isNodeList(rootGetElementsByClassName))
-  console.log('isHTMLCollection', isHTMLCollection(rootGetElementsByClassName))
-  console.log('isHTMLElement', isHTMLElement(rootGetElementsByClassName))
-  VanillaClickOutside(rootGetElementsByClassName, options, t =>
-    handleCallback('rootGetElementsByClassName', t)
+  vanillaClickOutside(
+    rootGetElementsByClassName,
+    (state) => handleCallback('rootGetElementsByClassName', state),
+    options
   )
 
-  console.log('\n')
-  console.heading('innerGetElementsByClassName')
+  console.log('>>> innerGetElementsByClassName')
   console.log(innerGetElementsByClassName)
-  console.log('contructor', innerGetElementsByClassName.constructor.name)
-  console.log('isNodeList', isNodeList(innerGetElementsByClassName))
-  console.log('isHTMLCollection', isHTMLCollection(innerGetElementsByClassName))
-  console.log('isHTMLElement', isHTMLElement(innerGetElementsByClassName))
-  VanillaClickOutside(innerGetElementsByClassName, options, t =>
-    handleCallback('innerGetElementsByClassName', t)
+  vanillaClickOutside(
+    innerGetElementsByClassName,
+    (state) => handleCallback('innerGetElementsByClassName', state),
+    options
   )
 
-  console.log('\n')
-  console.log('-'.repeat(60))
+  // -----------------------------------------
+  // NodeListOf<Element>
 
-  // ------------------------------------------------------------------------
+  const rootQuerySelectorAll = document.querySelectorAll('.root')
+  const innerQuerySelectorAll = document.querySelectorAll('.inner')
 
-  var rootQuerySelector = document.querySelector('.root')
-  var innerQuerySelector = document.querySelector('.inner')
-
-  console.log('\n')
-  console.heading('rootQuerySelector')
-  console.log(rootQuerySelector)
-  console.log('contructor', rootQuerySelector.constructor.name)
-  console.log('isNodeList', isNodeList(rootQuerySelector))
-  console.log('isHTMLCollection', isHTMLCollection(rootQuerySelector))
-  console.log('isHTMLElement', isHTMLElement(rootQuerySelector))
-  VanillaClickOutside(rootQuerySelector, options, t =>
-    handleCallback('rootQuerySelector', t)
-  )
-
-  console.log('\n')
-  console.heading('innerQuerySelector')
-  console.log(innerQuerySelector)
-  console.log('contructor', innerQuerySelector.constructor.name)
-  console.log('isNodeList', isNodeList(innerQuerySelector))
-  console.log('isHTMLCollection', isHTMLCollection(innerQuerySelector))
-  console.log('isHTMLElement', isHTMLElement(innerQuerySelector))
-  VanillaClickOutside(innerQuerySelector, options, t =>
-    handleCallback('innerQuerySelector', t)
-  )
-
-  console.log('\n')
-  console.log('-'.repeat(60))
-
-  // ------------------------------------------------------------------------
-
-  var rootQuerySelectorAll = document.querySelectorAll('.root')
-  var innerQuerySelectorAll = document.querySelectorAll('.inner')
-
-  console.log('\n')
-  console.heading('rootQuerySelectorAll')
+  console.log('>>> rootQuerySelectorAll')
   console.log(rootQuerySelectorAll)
-  console.log('contructor', rootQuerySelectorAll.constructor.name)
-  console.log('isNodeList', isNodeList(rootQuerySelectorAll))
-  console.log('isHTMLCollection', isHTMLCollection(rootQuerySelectorAll))
-  console.log('isHTMLElement', isHTMLElement(rootQuerySelectorAll))
-  VanillaClickOutside(rootQuerySelectorAll, options, t =>
-    handleCallback('rootQuerySelectorAll', t)
+  vanillaClickOutside(
+    rootQuerySelectorAll,
+    (state) => handleCallback('rootQuerySelectorAll', state),
+    options
   )
 
-  console.log('\n')
-  console.heading('innerQuerySelectorAll')
+  console.log('>>> innerQuerySelectorAll')
   console.log(innerQuerySelectorAll)
-  console.log('contructor', innerQuerySelectorAll.constructor.name)
-  console.log('isNodeList', isNodeList(innerQuerySelectorAll))
-  console.log('isHTMLCollection', isHTMLCollection(innerQuerySelectorAll))
-  console.log('isHTMLElement', isHTMLElement(innerQuerySelectorAll))
-  VanillaClickOutside(innerQuerySelectorAll, options, t =>
-    handleCallback('innerQuerySelectorAll', t)
+  vanillaClickOutside(
+    innerQuerySelectorAll,
+    (state) => handleCallback('innerQuerySelectorAll', state),
+    options
   )
 
-  console.log('\n')
-  console.log('-'.repeat(60))
+  // -----------------------------------------
+  // HTMLElement
 
-  // ------------------------------------------------------------------------
+  const rootGetElementById = document.getElementById('root')
+  const innerGetElementById = document.getElementById('inner')
 
-  console.log('-'.repeat(60))
-}
+  console.log('>>> rootGetElementById')
+  console.log(rootGetElementById)
+  vanillaClickOutside(
+    rootGetElementById,
+    (state) => handleCallback('rootGetElementById', state),
+    options
+  )
 
-function contextLog(name, value, str) {
-  const log = document.querySelector('.log tbody')
-  log.innerHTML =
-    `<tr>
-      <td>${name}</td>
-      <td class="${value ? 'yes' : 'no'}">${value}</td>
-      <td class="ele">${str}</td>
-    </tr>` + log.innerHTML
-}
+  console.log('>>> innerGetElementById')
+  console.log(innerGetElementById)
+  vanillaClickOutside(
+    innerGetElementById,
+    (state) => handleCallback('innerGetElementById', state),
+    options
+  )
 
-function handleCallback(name, t) {
-  if (isHTMLElement(t)) {
-    contextLog(name, true, t)
-  } else {
-    contextLog(name, false, t)
-  }
-}
+  // -----------------------------------------
+  // Element
 
-function isNodeList(s) {
-  return NodeList.prototype.isPrototypeOf(s)
-}
+  const rootQuerySelector = document.querySelector('.root')
+  const innerQuerySelector = document.querySelector('.inner')
 
-function isHTMLCollection(s) {
-  return HTMLCollection.prototype.isPrototypeOf(s)
-}
+  console.log('>>> rootQuerySelector')
+  console.log(rootQuerySelector)
+  vanillaClickOutside(
+    rootQuerySelector,
+    (state) => handleCallback('rootQuerySelector', state),
+    options
+  )
 
-function isHTMLElement(s) {
-  return HTMLElement.prototype.isPrototypeOf(s)
+  console.log('>>> innerQuerySelector')
+  console.log(innerQuerySelector)
+  vanillaClickOutside(
+    innerQuerySelector,
+    (state) => handleCallback('innerQuerySelector', state),
+    options
+  )
+
+  // -----------------------------------------
+  // Undefined
+
+  const undefinedTypeOf = document
+
+  console.log('>>> undefinedTypeOf')
+  console.log(undefinedTypeOf)
+  vanillaClickOutside(
+    undefinedTypeOf,
+    (state) => handleCallback('undefinedTypeOf', state),
+    options
+  )
+
+  // -----------------------------------------
 }

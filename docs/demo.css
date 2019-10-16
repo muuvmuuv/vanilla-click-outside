@@ -1,82 +1,118 @@
-body {
-  padding: 50px;
-  font-family: 'ZCOOL KuaiLe', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
-    sans-serif;
-  cursor: pointer;
+:root {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+  --font-serif: 'ZCOOL KuaiLe', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+  --font-mono: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+    monospace;
+  --font-emoji: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji';
+
+  --text-xxs: 0.5rem;
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-md: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.45rem;
+  --text-xxl: 2rem;
+
+  --spacing-xxs: 0.25rem;
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 0.75rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-xxl: 3rem;
+
+  --color-primary: #9e946e;
+  --color-primary-light: #bbb49a;
+  --color-primary-dark: #6f684d;
+
+  --color-light: #f5f4f1;
+  --color-dark: #100f0b;
+
+  --color-orange: #edb349;
+  --color-red: #f34b3b;
+  --color-blue: #3d57e7;
+  --color-green: #63c04e;
 }
 
-.emoji {
-  font-family: Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+body {
+  padding: var(--spacing-xxl) var(--spacing-lg);
+  background: var(--color-light);
 }
 
 header {
   text-align: center;
-  margin-bottom: 70px;
+  margin-bottom: var(--spacing-xxl);
 }
 
 header h1 {
-  color: #036ff6;
+  font-family: var(--font-serif);
+  color: var(--color-primary);
 }
 
 header .badges img {
-  margin: 0 5px;
-}
-
-.root,
-.inner {
-  position: relative;
-  padding: 60px 50px;
-}
-
-.root {
-  background: #bedbff;
-}
-
-.inner {
-  background: #036ff6;
-}
-
-.root::before,
-.root::after,
-.inner::before {
-  content: attr(data-title);
-  position: absolute;
-  top: 20px;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  color: #036ff6;
-}
-
-.root::after {
-  top: auto;
-  bottom: 20px;
-}
-
-.inner::before {
-  top: 50%;
-  transform: translateY(-50%);
-  color: #bedbff;
-}
-
-.log {
-  margin-top: 10px;
-  font-family: 'IBM Plex Mono', 'mononoki', monospace;
+  margin: 0 var(--spacing-xxs);
   user-select: none;
 }
 
-.log td {
-  padding-right: 40px;
+section[name='demo'] .root,
+section[name='demo'] .inner {
+  position: relative;
+  padding: calc(var(--spacing-xxl) * 1.2) var(--spacing-xxl);
+  text-transform: uppercase;
 }
 
-.log td.yes {
-  color: green;
+section[name='demo'] .root {
+  background: var(--color-primary-light);
 }
 
-.log td.no {
-  color: red;
+section[name='demo'] .inner {
+  background: var(--color-primary-dark);
 }
 
-.log td.ele {
-  color: orange;
+section[name='demo'] .root::before,
+section[name='demo'] .root::after,
+section[name='demo'] .inner::before {
+  content: attr(data-title);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+  font-size: var(--text-sm);
+  letter-spacing: 1px;
+  color: var(--color-primary-dark);
+}
+
+section[name='demo'] .root::before {
+  top: var(--spacing-md);
+}
+
+section[name='demo'] .root::after {
+  bottom: var(--spacing-md);
+}
+
+section[name='demo'] .inner::before {
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-primary-light);
+}
+
+section[name='log'] table {
+  font-family: var(--font-mono);
+  user-select: none;
+}
+
+section[name='log'] table td.true {
+  color: var(--color-green);
+}
+
+section[name='log'] table td.false {
+  color: var(--color-red);
+}
+
+section[name='log'] table td.null {
+  color: var(--color-orange);
 }
