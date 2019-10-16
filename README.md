@@ -11,7 +11,7 @@ Have a look at the [documentation](./docs) files; [demo.js](./docs/demo.js).
 Include the one you need (all minified and compressed):
 
 - MJS:
-  [vanilla-click-outside/dist/vanilla-click-outside.mjs.js](./dist/vanilla-click-outside.mjs.js)
+  [vanilla-click-outside/dist/vanilla-click-outside.mjs](./dist/vanilla-click-outside.mjs)
 - UMD:
   [vanilla-click-outside/dist/vanilla-click-outside.umd.js](./dist/vanilla-click-outside.umd.js)
 - ESNext:
