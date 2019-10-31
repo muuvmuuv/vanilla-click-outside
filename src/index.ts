@@ -1,22 +1,19 @@
 import { isNodeList, isHTMLCollection, isHTMLElement } from './utils'
 
-export type VanillaClickOutsideSelector =
-  | HTMLElement
-  | HTMLCollection
-  | NodeList
-export type VanillaClickOutsideOptions = {
+export type Selector = HTMLElement | HTMLCollection | NodeList
+export type Options = {
   removeListener: boolean
 }
-export type VanillaClickOutsideCallback = (state: boolean | null) => {}
+export type Callback = (state: boolean | null) => {}
 
-const defaultOptions: VanillaClickOutsideOptions = {
+const defaultOptions: Options = {
   removeListener: true,
 }
 
-export default function vanillaClickOutside(
-  selector: VanillaClickOutsideSelector,
-  callback: VanillaClickOutsideCallback,
-  options?: VanillaClickOutsideOptions
+function vanillaClickOutside(
+  selector: Selector,
+  callback: Callback,
+  options?: Options
 ): EventListener {
   const theOptions = { ...defaultOptions, ...options }
 
@@ -49,3 +46,5 @@ export default function vanillaClickOutside(
 
   return listener
 }
+
+export default vanillaClickOutside

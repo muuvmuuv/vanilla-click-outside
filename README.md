@@ -1,39 +1,56 @@
-# VanillaClickOutside 🌫
+# VanillaClickOutside 🍦
 
-A simple, small (578B) and easy to use function to detect clicks outside an element. Here is a [demo](https://muuvmuuv.github.io/vanilla-click-outside/).
+[Demo](https://muuvmuuv.github.io/vanilla-click-outside/)
+
+A simple, small (565 bytes) and easy to use function to detect if the user clicks outside
+an element.
+
+- [Installation](#installation)
+- [How to use](#how-to-use)
+  - [UMD](#umd)
+  - [CommonJS](#commonjs)
+  - [Options](#options)
+
+## Installation
+
+```bash
+npm install vanilla-click-outside
+```
 
 ## How to use
 
-Have a look at the [documentation](./docs) files; [demo.js](./docs/demo.js).
+### UMD
 
-### JavaScript
+```html
+<head>
+  <link rel="stylesheet" href="./path/to/vanilla-click-outside.umd.css" />
+  <script defer src="./path/to/vanilla-click-outside.umd.js"></script>
+</head>
+<body>
+  <div id="target">
+    <section></section>
+  </div>
+</body>
+```
 
-Include the one you need (all minified and compressed):
-
-- MJS:
-  [vanilla-click-outside/dist/vanilla-click-outside.mjs](./dist/vanilla-click-outside.mjs)
-- UMD:
-  [vanilla-click-outside/dist/vanilla-click-outside.umd.js](./dist/vanilla-click-outside.umd.js)
-- ESNext:
-  [vanilla-click-outside/dist/vanilla-click-outside.js](./dist/vanilla-click-outside.js)
-- CDN (via [UNPKG](https://unpkg.com/)):
-  [https://unpkg.com/vanilla-click-outside](https://unpkg.com/vanilla-click-outside)
+JavaScript:
 
 ```js
-import vanillaClickOutside from 'vanilla-click-outside'
-
-const ele = document.getElementById('root')
-vanillaClickOutside(ele, (type) => {
+const target = document.getElementById('target')
+vanillaClickOutside(target, (type) => {
   console.log(type)
 })
 ```
 
-### HTML
+### CommonJS
 
-```html
-<div id="root">
-  <section></section>
-</div>
+```javascript
+import { vanillaClickOutside } from 'vanilla-click-outside'
+
+const target = document.getElementById('target')
+vanillaClickOutside(target, (type) => {
+  console.log(type)
+})
 ```
 
 ### Options

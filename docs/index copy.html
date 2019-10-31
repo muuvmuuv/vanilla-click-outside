@@ -2,44 +2,37 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <title>VanillaClickOutside</title>
+  <title>Boobreaks</title>
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="viewport"
     content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover" />
   <meta name="description"
-    content="A simple easy to script to determine whenever the user clicks outside a selected element." />
+    content="Use Bootstraps breakpoints inside your JavaScript!" />
 
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe&display=swap" />
+  <link
+    href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet"
     href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
     crossorigin="anonymous">
 
+  <link rel="stylesheet" href="./boobreaks.umd.css" />
   <link rel="stylesheet" href="./demo.css" />
-  <script defer src="./vanilla-click-outside.umd.js"></script>
+  <script defer src="https://unpkg.com/he@1.2.0/he.js"></script>
+  <script defer src="./boobreaks.umd.js"></script>
   <script defer src="./demo.js"></script>
 </head>
 
 <body>
   <header>
-    <h1>VanillaClickOutside</h1>
-    <p>Click anywhere in the viewport to see the magic. More verbose information
-      in the console.</p>
+    <h1>Boobreaks</h1>
+    <p>Resize the window and see the magic below.</p>
   </header>
+
   <main>
-    <section name="demo">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="root" id="root" data-title="root">
-              <div class="inner" id="inner" data-title="inner"></div>
-            </div>
-          </div>
-        </div>
-    </section>
     <section name="log" class="mt-4">
       <div class="container">
         <div class="row">
@@ -47,44 +40,74 @@
             <table class="table table-bordered">
               <thead>
                 <tr>
-                  <th>Selector</th>
-                  <th>Outside</th>
+                  <th>Function</th>
+                  <th>Expression</th>
+                  <th>Matching</th>
                 </tr>
               </thead>
               <tbody>
-                <tr class="rootGetElementById">
+                <tr class="current">
                   <td class="null">null</td>
-                  <td class="null">null</td>
-                </tr>
-                <tr class="innerGetElementById">
                   <td class="null">null</td>
                   <td class="null">null</td>
                 </tr>
-                <tr class="rootGetElementsByClassName">
+                <tr class="width">
                   <td class="null">null</td>
-                  <td class="null">null</td>
-                </tr>
-                <tr class="innerGetElementsByClassName">
                   <td class="null">null</td>
                   <td class="null">null</td>
                 </tr>
-                <tr class="rootQuerySelector">
+                <tr class="is1">
                   <td class="null">null</td>
-                  <td class="null">null</td>
-                </tr>
-                <tr class="innerQuerySelector">
                   <td class="null">null</td>
                   <td class="null">null</td>
                 </tr>
-                <tr class="rootQuerySelectorAll">
+                <tr class="is2">
                   <td class="null">null</td>
-                  <td class="null">null</td>
-                </tr>
-                <tr class="innerQuerySelectorAll">
                   <td class="null">null</td>
                   <td class="null">null</td>
                 </tr>
-                <tr class="undefinedTypeOf">
+                <tr class="is3">
+                  <td class="null">null</td>
+                  <td class="null">null</td>
+                  <td class="null">null</td>
+                </tr>
+                <tr class="is4">
+                  <td class="null">null</td>
+                  <td class="null">null</td>
+                  <td class="null">null</td>
+                </tr>
+                <tr class="is5">
+                  <td class="null">null</td>
+                  <td class="null">null</td>
+                  <td class="null">null</td>
+                </tr>
+                <tr class="is6">
+                  <td class="null">null</td>
+                  <td class="null">null</td>
+                  <td class="null">null</td>
+                </tr>
+                <tr class="is7">
+                  <td class="null">null</td>
+                  <td class="null">null</td>
+                  <td class="null">null</td>
+                </tr>
+                <tr class="is8">
+                  <td class="null">null</td>
+                  <td class="null">null</td>
+                  <td class="null">null</td>
+                </tr>
+                <tr class="is9">
+                  <td class="null">null</td>
+                  <td class="null">null</td>
+                  <td class="null">null</td>
+                </tr>
+                <tr class="is10">
+                  <td class="null">null</td>
+                  <td class="null">null</td>
+                  <td class="null">null</td>
+                </tr>
+                <tr class="is11">
+                  <td class="null">null</td>
                   <td class="null">null</td>
                   <td class="null">null</td>
                 </tr>

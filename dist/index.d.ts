@@ -1,6 +1,7 @@
-export declare type VanillaClickOutsideSelector = HTMLElement | HTMLCollection | NodeList;
-export declare type VanillaClickOutsideOptions = {
+export declare type Selector = HTMLElement | HTMLCollection | NodeList;
+export declare type Options = {
     removeListener: boolean;
 };
-export declare type VanillaClickOutsideCallback = (state: boolean | null) => {};
-export default function vanillaClickOutside(selector: VanillaClickOutsideSelector, callback: VanillaClickOutsideCallback, options?: VanillaClickOutsideOptions): EventListener;
+export declare type Callback = (state: boolean | null) => {};
+declare function vanillaClickOutside(selector: Selector, callback: Callback, options?: Options): EventListener;
+export default vanillaClickOutside;
