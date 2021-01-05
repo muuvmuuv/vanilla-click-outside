@@ -37,8 +37,8 @@ JavaScript:
 
 ```js
 const target = document.getElementById('target')
-vanillaClickOutside(target, (type) => {
-  console.log(type)
+vanillaClickOutside(target, (type, event) => {
+  console.log(type, event)
 })
 ```
 
@@ -48,8 +48,8 @@ vanillaClickOutside(target, (type) => {
 import { vanillaClickOutside } from 'vanilla-click-outside'
 
 const target = document.getElementById('target')
-vanillaClickOutside(target, (type) => {
-  console.log(type)
+vanillaClickOutside(target, (type, event) => {
+  console.log(type, event)
 })
 ```
 
