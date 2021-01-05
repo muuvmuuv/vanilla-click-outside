@@ -4,7 +4,7 @@ export type Selector = HTMLElement | HTMLCollection | NodeList
 export type Options = {
   removeListener: boolean
 }
-export type Callback = (state: boolean | null) => {}
+export type Callback = (state: boolean | null, event: Event) => {}
 
 const defaultOptions: Options = {
   removeListener: true,
@@ -24,22 +24,22 @@ function vanillaClickOutside(
           selection.contains(<Node>event.target)
         )
       ) {
-        return callback(false)
+        return callback(false, event)
       }
     } else if (isHTMLElement(selector)) {
       if ((selector as HTMLElement).contains(<Node>event.target)) {
-        return callback(false)
+        return callback(false, event)
       }
     } else {
       console.warn('Undefined type of', selector)
-      return callback(null)
+      return callback(null, event)
     }
 
     if (theOptions.removeListener) {
       document.removeEventListener('click', listener)
     }
 
-    return callback(true)
+    return callback(true, event)
   }
 
   document.addEventListener('click', listener)
