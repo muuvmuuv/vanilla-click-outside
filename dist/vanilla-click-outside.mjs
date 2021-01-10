@@ -1,2 +1,0 @@
-var e={removeListener:!0};export default function(t,r,n){var o=Object.assign({},e,n),i=function(e){if(NodeList.prototype.isPrototypeOf(t)||HTMLCollection.prototype.isPrototypeOf(t)){if(Array.from(t).some(function(t){return t.contains(e.target)}))return r(!1,e)}else{if(!HTMLElement.prototype.isPrototypeOf(t))return console.warn("Undefined type of",t),r(null,e);if(t.contains(e.target))return r(!1,e)}return o.removeListener&&document.removeEventListener("click",i),r(!0,e)};return document.addEventListener("click",i),i}
-//# sourceMappingURL=vanilla-click-outside.mjs.map

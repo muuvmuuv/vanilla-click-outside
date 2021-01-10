@@ -1,10 +1,6 @@
 {
   "printWidth": 90,
-  "endOfLine": "lf",
   "singleQuote": true,
-  "requirePragma": false,
-  "arrowParens": "always",
-  "trailingComma": "es5",
   "semi": false,
   "proseWrap": "always"
 }

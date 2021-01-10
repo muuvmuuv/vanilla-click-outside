@@ -21,6 +21,15 @@
   <link rel="stylesheet" href="./demo.css" />
   <script defer src="./vanilla-click-outside.umd.js"></script>
   <script defer src="./demo.js"></script>
+  <script type="module">
+    import modernVanillaClickOutside from './vanilla-click-outside.modern.js'
+
+    modernVanillaClickOutside(document.getElementById('inner'), (type) => {
+      handleCallback("modern", type)
+    }, {
+      removeListener: false
+    })
+  </script>
 </head>
 
 <body>
@@ -81,6 +90,10 @@
                   <td class="null">null</td>
                 </tr>
                 <tr class="innerQuerySelectorAll">
+                  <td class="null">null</td>
+                  <td class="null">null</td>
+                </tr>
+                <tr class="modern">
                   <td class="null">null</td>
                   <td class="null">null</td>
                 </tr>

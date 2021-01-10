@@ -1,6 +1,6 @@
 {
   "name": "vanilla-click-outside",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "A simple easy to use script to determine whenever the user clicks outside a selected element.",
   "keywords": [
     "vanilla",
@@ -18,31 +18,41 @@
     "email": "marvin.heilemann+github@googlemail.com",
     "url": "https://marvin.digital/"
   },
-  "source": "src/index.ts",
-  "main": "dist/vanilla-click-outside.js",
-  "umd:main": "dist/vanilla-click-outside.umd.js",
-  "module": "dist/vanilla-click-outside.mjs",
-  "types": "dist/vanilla-click-outside.d.ts",
-  "unpkg": "dist/vanilla-click-outside.umd.js",
+  "source": "./src/index.ts",
+  "main": "./dist/vanilla-click-outside.js",
+  "umd:main": "./dist/vanilla-click-outside.umd.js",
+  "exports": "./dist/vanilla-click-outside.mjs",
+  "module": "./dist/vanilla-click-outside.module.js",
+  "unpkg": "./dist/vanilla-click-outside.umd.js",
+  "types": "./dist/vanilla-click-outside.d.ts",
   "scripts": {
     "start": "npm run watch",
-    "build": "microbundle",
     "watch": "microbundle watch",
-    "build-docs": "microbundle -f umd -o docs",
-    "watch-docs": "microbundle watch -f umd -o docs",
+    "clean": "del dist docs/vanilla-click-outside.*",
+    "--------------- BUILD---------------": "",
+    "build": "run-s -l clean build:*",
+    "build:main": "microbundle",
+    "build:docs": "microbundle -f umd,modern -o docs",
+    "--------------- DOCS ---------------": "",
+    "docs": "run-p -l docs:*",
+    "docs:serve": "serve docs",
+    "docs:build": "microbundle watch -f umd,modern -o docs",
+    "--------------- TOOLS --------------": "",
     "prepublishOnly": "npm run build",
-    "serve": "serve docs"
+    "lint": "eslint --cache src"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^2.6.0",
-    "@typescript-eslint/parser": "^2.6.0",
-    "eslint": "^6.6.0",
-    "eslint-config-prettier": "^6.5.0",
-    "eslint-plugin-prettier": "^3.1.1",
-    "microbundle": "^0.11.0",
-    "node-sass": "^4.13.0",
+    "@typescript-eslint/eslint-plugin": "^4.12.0",
+    "@typescript-eslint/parser": "^4.12.0",
+    "del-cli": "^3.0.1",
+    "eslint": "^7.17.0",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-unicorn": "^25.0.1",
+    "microbundle": "^0.13.0",
     "npm-run-all": "^4.1.5",
-    "prettier": "^1.18.2",
-    "serve": "^11.2.0"
+    "prettier": "^2.2.1",
+    "serve": "^11.3.2",
+    "typescript": "^4.1.3"
   }
 }
